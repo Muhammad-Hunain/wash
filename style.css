@@ -1,0 +1,719 @@
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+.all{
+  background-color: #fafafa;
+}
+.titlespan {
+  text-decoration: underline;
+  text-decoration-color: #6503e7;
+}
+
+.hea{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.hea p {
+  margin: 0 auto;
+ 
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 800;
+ 
+}
+.hea img{
+  
+  width: 25%;
+  height: 25%;
+}
+.descriptions{
+  display: flex;
+  align-items: center;
+  
+
+  justify-content: space-evenly;
+  width:80%;
+   margin: 0 auto;
+ gap: 50px;
+
+ /* margin-left: 180px; */
+
+  /* margin-left: 250px; */
+  /* gap: 10%; */
+
+  
+}
+
+.Car_main{
+  text-align: center;
+    /* display: flex; */
+  align-items: center;
+  
+
+  justify-content: space-evenly;
+  /* width:80%; */
+   /* margin: 0 auto; */
+ gap: 100px;
+
+}
+.Car_main .count{
+  /* margin-left: -3%; */
+  margin-left: 2% !important; 
+}
+.count h1{
+  text-align: center;
+  font-size: 90px;
+  margin-top: -2px;
+  font-weight: 700;
+  color: #664fd4;
+
+}
+.count h4{
+  font-size: 21px;
+  margin-top: -36px;
+  
+}
+.count:nth-child(3){
+  /* margin-left: 3%; */
+}
+
+
+.hea img{
+  
+  margin-top: 3%;
+  width: 15%;
+  height: 15%;
+}
+.wash p{
+  margin-top: -19px;
+  text-align: center; /* Center align the text */
+  font-size: 18px;
+}
+.infoclass {
+  display: flex;
+  margin-top: -8px;
+  justify-content: center;
+}
+
+
+.infoclass img{
+  margin-top: 15px;
+  height: 25px;
+  width: 20px;
+}
+.infoclass span{
+  color:#664fd4 ;
+}
+.infoclass img:hover{
+  box-shadow: 0 0 10px 0 rgba(132, 131, 131, 0.2);
+}
+
+
+/* CSS for the container */
+.wash-container {
+
+  height: 435px;
+  width: 340px;
+  border: solid 1px #dbdada;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 1%;
+  margin-left: 20px;
+
+
+  
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 1%}
+
+.wash-container h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.wash-container span {
+  color: #664fd4;
+}
+
+.wash-image {
+  position: relative; /* Set the container's position to relative */
+  width: 200px; /* Adjust the container's width as needed */
+  height: 200px; /* Adjust the container's height as needed */
+  margin-left: 20%;
+}
+
+.wash-image img {
+  position: absolute; /* Position both images absolutely within the container */
+}
+
+.wash-image img:nth-child(1) {
+  width: 100%; /* Set the first image to take up 100% of the container's width */
+  height: 80%; /* Set the first image to take up 100% of the container's height */
+  right: 0;
+}
+
+.wash-image img:nth-child(2) {
+  top: 15px; 
+  left: 10px; 
+  width: 190px; 
+  height: 135px; 
+  z-index: 1; 
+}
+.uppergrid{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+}
+.uppergrid img{
+  width: 100px;
+  height: 100%;
+  z-index: 3;
+}
+
+
+/* CSS for the wash price */
+.wash-price {
+  font-size: 45px;
+  font-weight: bold;
+   margin-top: -12px;
+  text-align: center;
+  margin-right:17px ;
+}
+.buttonlearn button{
+    background: #664fd4;
+    color: white;
+    height: 35px;
+    width: 160px;
+    border: none;
+    margin-top: 20px;
+    /* margin-left: 90px; */
+    border-radius: 18px;
+}
+.buttonlearn button:hover{
+    background: rgb(97, 37, 236);
+
+}
+.buttonlearn a{
+  text-decoration: none;
+  color: white;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.nextbtn a{
+  text-decoration: none;
+  color: white;
+}
+     .nextbtn button{
+         margin-left: 42%;
+         margin-top: 30px;
+         height: 45px;
+         width: 300px;
+         font-size: 20px;
+         background-color: #664fd4;
+         color: white;
+         border: solid 1px ;
+         padding: 5px;
+         border-radius: 20px;
+         cursor: pointer;
+        
+     }
+     .nextbtn button:hover{
+         background-color: #5d3ba7; 
+
+     }
+     
+     .footer {
+      margin-top: 100px;
+
+
+   
+     }
+     .footer img{
+      margin-top: -10px;
+      width: 75%;
+      justify-content: center;
+      align-items: center;
+      margin-left: 150px;
+      margin-left: 12%;
+      margin: 0 auto;
+      display: flex;
+        /* margin-left: 12%; */
+     }
+     .footer h1{
+      text-align: center;
+      font-size: 45px;
+     }
+     .maincontactos{
+      /* margin-top: 10px; */
+      /* margin-bottom: 40px; */
+      display: flex;
+  justify-content: space-around;
+  width: 90%;
+
+     }
+     .contactos{
+      text-align: center;
+      margin-left: 13%;
+     
+     }
+     @media screen and   (min-width:1101px)  and (max-width: 1200px) {
+ 
+      .descriptions{
+        margin-left:20px;
+        width: 100%;
+      }
+      .contactos{
+        margin-left: 6%;
+      }
+    
+    }
+    @media screen and (min-width:1201px)  and (max-width: 1300px) {
+     
+      .descriptions{
+        margin-left:20px;
+        width: 100%;
+      }
+      .contactos{
+        margin-left: 8%;
+      }
+     
+    
+    }
+     .contactos img{
+      height: 80px;
+      width: 80px;
+     }
+     .contactos a{
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: underline;
+      text-decoration-color: black;
+      color: black;
+      
+      
+     }
+     .contactos h3{
+      margin-left: 20px;
+      
+      font-size: 25px;
+     }
+    
+     .button-container {
+      margin-top: 20px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .button-container p {
+      margin-left: 40%;
+      font-size: 20px;
+    }
+
+    /* CSS for the button */
+    .select-button {
+      background-color: #5d3ba7;
+      color: #ffff;
+      font-weight: 800px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .interiordiv {
+      display: flex;
+      height: 100%;
+      width: 516px;
+      margin-left: 35%;
+      margin-top: 0px;
+
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0px 0px 10px 0px #e0dfdf;
+      display: flex;
+      flex-direction: column;
+  
+    }
+    .interiordiv h2 {
+      margin-left: 20px;
+      margin-top: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .extra {
+      display: flex;
+      margin-top: 5px;
+    }
+    .priceadd {
+      display: flex;
+    }
+    .priceadd p {
+      margin-left: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .priceadd button {
+      margin-top: 14px;
+      width: 120px;
+      height: 30px;
+      margin-left: 40px;
+      background-color: #fefefe;
+     color: #6503e7;
+      border-color: #6503e7;
+      padding: 5px;
+      border: solid 1px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    .interiorimg {
+      margin-left: 20px;
+    
+    }
+    .interiortext {
+      margin-left: 45px;
+    }
+    .interiortext p {
+      font-size: 18px;
+    }
+    .select-button a{
+      text-decoration: none;
+     
+    }
+    .select-button button{
+     width: 30px;
+    }
+    .select-button:hover{
+      background-color: #fff;
+      color: #5d3ba7;
+      border: 1px solid ;
+      border-color:#5d3ba7 ;
+    }
+  
+     /* Media Query for 720px screens */
+/* Media Query for 720px screens */
+@media screen and (max-width: 720px) {
+  .hea p {
+      font-size: 19px; /* Adjust font size for smaller screens */
+  }
+  .wash-container {
+      width: 80%; /* Make the container full width */
+      height: 430px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+     
+  }
+  .wash-container:nth-child(1){
+  
+    margin-left: 60px;
+  }
+  .wash-container:nth-child(2){
+    /* margin-left: 60px; */
+    margin: auto;
+  }
+  .wash-container:nth-child(3){
+    margin-left: 60px;
+  }
+  .con {
+      display: flex;
+      flex-direction: column;
+  }
+  .descriptions{
+    margin-left: 70px;
+    display: flex;
+    justify-content: none;
+
+  }
+  .count{
+ 
+    margin-left: -3%;
+    
+    
+  }
+  .count h1{
+    font-size: 60px;
+  }
+  .count h4{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .wash-container h2 {
+      font-size: 24px; /* Adjust font size for smaller screens */
+  }
+  .wash-image{
+   justify-content: center;
+  }
+  .wash-image:nth-child(2){
+    height: 200px;
+    width: 200px;
+    margin-left: 30%;
+  }
+  .wash-image:nth-child(3) {
+      height: 500px; /* Reset left margin */
+  }
+  .buttonlearn{
+    margin-top: -11px;
+    margin-right: 11%;
+    
+  }
+  .footer {
+    
+    margin-left: 30px;
+    margin-right: 5px;
+  }
+  .footer img{
+height: 300px;
+width: 90%;
+display: none;
+  }
+  .contactos img{
+    margin-left: -30px;
+  display: flex;
+  height: 70px;
+  width: 70px;
+  }
+  .contactos h3{
+    /* margin-left: 10px; */
+    font-size: 20px;
+  }
+  .infoclass{
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+    font-size: 17px;
+  }
+  .infoclass img{
+   margin-top: -5px;
+  }
+  
+  .nextbtn button{
+    margin-left: 25%;
+    width: 50%;
+   
+  }
+  .button-container p {
+    font-size: 19px;
+    
+    margin-left: 35%px;
+    
+}
+.interiordiv {
+    width: 90%;
+    margin-left: 20px;
+    text-align: center;
+    
+}
+.interiordiv h2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 28px;
+}
+.extra, .priceadd {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.priceadd p {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.priceadd button {
+    margin-top: 14px;
+    width: 120px;
+    height: 30px;
+    margin-left: 40px;
+    font-size: 16px;
+}
+.interiorimg, .interiortext {
+    margin-left: 10%;
+   
+}
+.interiortext p {
+    font-size: 16px;
+}
+.extra {
+    margin-right: 10%;
+}
+.hea img{
+  margin-top: 3%;
+  width: 30%;
+  height: 30%;
+}
+
+}
+
+/* Media Query for 480px screens */
+@media screen and (max-width: 480px) {
+  .hea img{
+    margin-top: 3%;
+    width: 30%;
+    height: 30%;
+  }
+  .wash-container {
+  margin-bottom: 40px;
+      height: 395px; /* Allow the container's height to adjust */
+      margin-top: 0; /* Reset top margin */
+      padding: 5px;
+      width: 80%;
+
+  }
+  
+  .wash-container:nth-child(1) {
+      margin-left: 35px; /* Reset left margin */
+  }
+  .wash-container:nth-child(2) {
+      /*margin-left: 35px;  Reset left margin */
+      margin: auto;
+  }
+  .wash-container:nth-child(3) {
+      margin-left: 35px; /* Reset left margin */
+  }
+  .wash-container h2 {
+      font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .wash-price {
+      font-size: 24px; /* Adjust font size for smaller screens */
+      text-align: center; /* Center the text */
+  }
+  .buttonlearn button {
+      width: 120px; /* Adjust button width */
+      margin-bottom: 100px;
+      margin-left: 13%;
+      
+  }
+  .buttonlearn a {
+      text-decoration: none;
+      color: white;
+  }
+  .wash-image:nth-child(2){
+    height: 200px;
+   margin-left: 17%;
+    width: 200px;
+  }
+  .descriptions img{
+  
+    width: 100px;
+    height: 100%;
+  }
+  .descriptions {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+    margin-left: 45px;
+}
+.count{
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  
+}
+
+.count h1{
+  text-align: center;
+}
+.count h4{
+  text-align: center;
+  font-size: 18px;
+}
+.Car_main{
+margin-top: 20px;
+}
+  .footer{
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+  .footer img{
+height: 300px;
+width: 100%;
+display: none;
+  }
+  .footer h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.maincontactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactos {
+    /* margin: 5px auto; */
+    text-align: center;
+    
+}
+.infoclass {
+ 
+}
+
+.contactos h3 {
+    font-size: 18px;
+    /* margin-top: 0px; */
+    margin-right: 15px;
+ 
+}
+  .nextbtn button{
+    margin-left: 25%;
+    width: 50%;
+  }
+  .button-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.button-container p {
+    margin-left: 200px;
+    font-size: 18px;
+}
+.interiordiv {
+    width: 90%;
+    text-align: center;
+    margin-left: 30px;
+      }
+.interiordiv h2 {
+    margin-left: -15px;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+.extra, .priceadd {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.priceadd p {
+ 
+    font-size: 16px;
+    margin-left: 0px;
+}
+.priceadd button {
+  align-items: center;
+    margin-top: 10px;
+    width: 100px;
+    height: 28px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.interiorimg, .interiortext {
+    margin-left: 10px;
+}
+.interiortext p {
+    font-size: 14px;
+}
+}

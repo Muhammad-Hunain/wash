@@ -1,0 +1,187 @@
+<!-- FILEPATH: /E:/Task4/summary.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Summary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+   * {
+  background-color: #f9f9f9;
+}
+
+.booked {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center align items */
+  gap: 10px; /* Add some space between items */
+}
+
+.booking-details img {
+  height: 50px;
+  width: 60px;
+  margin: 10px  ;
+}
+
+.key img {
+  height: 120px;
+  width: 120px;
+  margin: 3px auto ;
+  
+  
+}
+.booking-details a{
+  margin-left: 2%;
+}
+
+.booked h2 {
+  font-size: 38px;
+}
+
+.booked h3 {
+  font-size: 24px;
+}
+
+.booked h4 {
+  font-size: 20px;
+  color: red;
+  margin-top: -20px;
+}
+
+.booking-details h3 {
+  font-size: 23px;
+}
+
+.bookcar p {
+  font-size: 20px;
+}
+.bizum img{
+ 
+  margin-left: -10%;
+}
+/* Media Query for screens with a maximum width of 720px */
+@media screen and (max-width: 720px) {
+  .booked {
+    margin-top: 10%;
+  }
+
+  .booking-details img {
+    height: 50px;
+    width: 60px;
+  }
+
+  .key img  {
+    height: 90px;
+    width: 100px;
+  }
+
+  .booked h2 {
+    font-size: 28px;
+  }
+
+  .booked h3 {
+    font-size: 20px;
+  }
+
+  .booking-details h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .bookcar p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .booked h2 {
+    font-size: 22px;
+  }
+
+  .booked h3 {
+    font-size: 15px;
+  }
+  .booked h4 {
+    font-size: 15px;
+  }
+
+  .booking-details h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .bizum img{
+    margin-left: -35px;
+  }
+ .whatsapp{
+  margin-left: 10px;
+  
+ }
+ .whatsapp h3{
+  font-size: 20px;
+ }
+
+  .bookcar p {
+    font-size: 16px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="booked">
+      <h2>
+        TU LAVADO DE COCHE ESTÁ <span style="color: #6503e7">RESERVADO</span>
+      </h2>
+      <h3>Su reserva se confirmará una vez que recibamos el pago a través de Bizum</h3>
+      <h4>pago con la referencia de la matrícula de su coche.</h4>
+      <div class="booking-details">
+        <div class="bizum">
+          <img src="bizum.png" alt="car" style="height: 90px; width: 170px;"/>
+        </div>
+        <div class="whatsapp">
+          <a href="https://wa.me/34637851925" target="_blank">
+            <h3>637 851 925</h3>
+          </a>
+        </div>
+       
+      </div>
+      <div class="booking-details">
+        <div style="display: flex;">
+          <img src="info.png" alt="info" />
+          <h3>Si has pedido un lavado de coche interior, deja las llaves del coche en la seguridad de tu condominio</h3>
+         
+     
+          <div class="key">
+            <img src="key.png" alt="key" />
+          </div>
+           
+        </div>
+       
+        
+      </div>
+    </div>
+    <div class="bookcar">
+      <p id="date"></p>
+      <p id="model"></p>
+    </div>
+   
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        calculateTotalPrice();
+        const date = document.getElementById("date");
+        const model = document.getElementById("model");
+        date.innerHTML = localStorage.getItem("date");
+        model.innerHTML = localStorage.getItem("model");
+        console.log("date", date.innerHTML);
+      });
+    </script>
+    <script src="common.js"></script>
+  </body>
+</html>

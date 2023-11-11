@@ -1,0 +1,445 @@
+<!-- FILEPATH: /E:/Task4/washtype.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wash Type Selection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .button-container {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .button-container p {
+        margin-left: 40%;
+        font-size: 20px;
+      }
+
+      /* CSS for the button */
+      .select-button {
+        background-color: #eef7ee;
+        color: rgb(7, 7, 7);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .maindiv {
+        display: flex;
+        height: 300px;
+        width: 516px;
+        margin-left: 50px;
+        margin-top: 70px;
+
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 10px 0px #c1bfbf;
+      }
+      .maindiv:nth-child(1) {
+        /* margin-left: 220px; */
+      }
+      .wash-type-container {
+        margin-left: 30px;
+      }
+      .wash-type-container img {
+        margin-top: 20px;
+        height: 190px;
+        width: 120px;
+        margin-left: 38px;
+      }
+
+      .wash-type-container p {
+        margin-left: 40px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .checks {
+        margin-left: 60px;
+      }
+      .boxes {
+        display: flex;
+        flex-direction: column;
+      }
+      .wash-type-checkbox {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .checks h2 {
+        margin-top: 20px;
+        font-size: 30px;
+      }
+
+      .boxes label {
+        font-size: 20px;
+      }
+      .checks button {
+        margin-left: 30px;
+        margin-top: 30px;
+        height: 30px;
+        width: 110px;
+        background-color: #ffffff;
+        color: rgb(103, 84, 188);
+        border: solid 1px rgb(103, 84, 188);
+        padding: 5px;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .checks button:hover {
+        background-color: #6941bf;
+        color: #eef7ee;
+      }
+
+      .flexdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .wash-type-checkbox {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #8806e6; /* Border color (purple) */
+        border-radius: 50%; /* Border radius (round) */
+        margin-right: 10px;
+
+        cursor: pointer;
+      }
+
+      .wash-type-checkbox::after {
+        background-color: #8806e6; /* Background color when checked (purple) */
+      }
+
+      .wash-type-option label {
+        font-size: 20px;
+      }
+
+      .boxes label {
+        margin-top: 15px;
+        font-family: system-ui, sans-serif;
+        font-size: 1.3rem;
+
+        line-height: 0.9;
+       
+        gap: 0.9em;
+      }
+
+
+      input[type="checkbox"] {
+      
+
+        display: none   ;
+        
+      }
+
+     
+
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+
+      input[type="checkbox"]:disabled {
+        --form-control-color: var(--form-control-disabled);
+
+        color: var(--form-control-disabled);
+        cursor: not-allowed;
+      }
+      .wash-type-container p {
+        font-size: 34px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      /* Media Query for 480px screens */
+      @media screen and (max-width: 480px) {
+        .button-container {
+          margin-top: 10px;
+          margin-left: 10px;
+          display: flex;
+          text-align: center;
+        }
+        input[type="checkbox"]::before {
+          height: 10px;
+          width: 10px;
+        }
+        .button-container p {
+          margin-left: 140px;
+          font-size: 18px;
+        }
+        .maindiv {
+          height: auto;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .maindiv:nth-child(1) {
+          /* margin-left: 30px; */
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .wash-type-container {
+          margin-left: 10px;
+          text-align: center;
+        }
+        .wash-type-container img {
+          margin-top: 10px;
+          height: 200px;
+          width: 100%;
+        }
+        .wash-type-container p {
+          margin-left: 57px;
+          font-size: 22px;
+        }
+        .checks {
+          margin-left: 55px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+        .boxes {
+          margin-left: 10px;
+          
+        }
+        .boxes label{
+          font-size: 17px;
+        }
+        .checks h2 {
+          margin-top: 10px;
+          font-size: 24px;
+          margin-left: 10px;
+        }
+        .checks input {
+          height: 16px;
+          width: 16px;
+        }
+        .checks button {
+          /* margin-left: 10px; */
+          height: 24px;
+    width: 100px;
+    font-size: 14px;
+    padding: 3px;
+    margin: 24px 30px 17px 0px;
+          
+        }
+        .flexdiv {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .boxes button{
+          margin: 20px auto;
+        }
+      }
+
+      /* Media Query for 720px screens */
+      @media screen and (min-width: 481px) and (max-width: 720px) {
+        .button-container p {
+          font-size: 16px;
+        }
+        .flexdiv {
+          display: flex;
+          flex-direction: column;
+        }
+        .maindiv {
+          width: 70%;
+          margin: 20px;
+          margin-left: 20%;
+        }
+        .maindiv:nth-child(1) {
+          margin-left: 18%;
+        }
+        .maindiv:nth-child(2) {
+          margin-left: 18%;
+        }
+        .wash-type-container {
+          margin-left: 30px;
+        }
+        .wash-type-container img {
+          margin-top: 10px;
+          height: 190px;
+          width: 120px;
+        }
+        .wash-type-container p {
+          font-size: 29px;
+          margin-top: 40px;
+        }
+
+        .checks {
+          margin-left: 40px;
+          margin-right: 10px;
+          gap: 10px;
+        }
+        .checks h2 {
+          font-size: 28px;
+        }
+        .checks input {
+          height: 20px;
+          width: 20px;
+        }
+        .checks button {
+          margin-left: 20px;
+          margin-top: 90px;
+          height: 28px;
+          width: 120px;
+          font-size: 16px;
+          padding: 4px;
+        }
+        .boxes label {
+          font-size: 16px;
+        }
+        .boxes input {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="select-button" id="select-button">&lt</button>
+    </div>
+    <h1 style="text-align: center" >COHCE <span id="mainheading" style="color: #664fd4;"></span></h1>
+    <div class="flexdiv">
+      <div class="maindiv">
+        <div class="wash-type-container">
+          <img class="wash-type-image" src="car.png" alt="Wash Type Image" />
+          <p class="wash-type-price">​<span id="wash-type-price"></span></p>
+        </div>
+        <div class="checks">
+          <h2 class="wash-type-heading">Exterior</h2>
+          <div class="boxes">
+            <label style="font-weight: bold;"
+            >Includio:</label
+          >
+            <label>
+              <input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Exterior"
+                data-name="Lavado simple"
+                disabled
+              />
+
+              Lavado simple</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Exterior"
+                data-name="Lavado de ventanas"
+                disabled
+              />Lavado de ventanas</label
+            >
+
+            <label
+              ><input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Exterior"
+                data-name="Secado"
+                disabled
+              />Secado</label
+            >
+          
+          </div>
+
+          <button class="wash-type-add-button" id="exterior-add-button">
+            Add
+          </button>
+        </div>
+      </div>
+      <div class="maindiv">
+        <div class="wash-type-container">
+          <img class="wash-type-image" src="seats.png" alt="Wash Type Image" />
+          <p class="wash-type-price">​<span id="wash-type-price"></span></p>
+        </div>
+        <div class="checks">
+          <h2 class="wash-type-heading">Interior</h2>
+          <div class="boxes">
+            <label style="font-weight: bold;"
+            >Includio:</label
+          >
+            <label
+              ><input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Interior"
+                data-name="Limpieza con aspiradora"
+                disabled
+              />Limpieza interior</label
+            >
+            <label  data-category="Interior"
+            data-name="Lavado de ventanas"
+              ><input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Interior"
+                data-name="Aspiración simple"
+                disabled hidden="true"
+              />Aspiración simple</label
+            >
+
+            <label  data-category="Interior"
+            data-name="Lavado de ventanas"
+              ><input
+                type="checkbox"
+                class="wash-type-checkbox"
+                data-category="Interior"
+                data-name="Lavado de ventanas"
+                disabled hidden="true"
+              />Lavado de ventanas</label
+            >
+          
+            <label hidden="true"></label>
+            <label hidden="true"></label>
+            <label hidden="true"></label>
+            
+          </div>
+
+          <button class="wash-type-add-button" id="interior-add-button">
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="nextbtn">
+      <button id="nextButton">próximo</button>
+    </div>
+    <script src="common.js"></script>
+    <script>
+ 
+
+      document
+        .getElementById("select-button")
+        .addEventListener("click", function () {
+          
+          localStorage.removeItem("selectedChecklists");
+          window.location.href = "home.html";
+        });
+        document.getElementById("nextButton").addEventListener("click", function () {
+  const data = JSON.parse(localStorage.getItem("selectedChecklists")); // Parse the data as JSON
+  console.log("mydata", data);
+  const washType = data.washType;
+
+  if (data) {
+    if (data.interior && data.interior.length === 0) {
+      window.location.href = "exterior.html";
+    } else if (data.exterior && data.exterior.length === 0) {
+      window.location.href = "interior.html";
+    } else {
+      // If both interior and exterior have items, you can navigate to checkout.html
+      window.location.href = "interior.html";
+    }
+  } else {
+    window.location.href = `washtype.html?type=${washType}`;
+  }
+});
+
+
+    </script>
+  </body>
+</html>

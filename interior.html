@@ -1,0 +1,161 @@
+<!-- FILEPATH: /E:/Task4/washtype.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Interior</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="select-button" id="select-buttons">&lt</button>
+    </div>
+    <div class="interiordiv">
+      <h2>Interior</h2>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="seat.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Sillas de coche (lavado simples)</p>
+          <div class="priceadd">
+            <p id="PRICE">​</p>
+            <button
+              class="add-option"
+              id="add-option"
+              data-category="Interior (Extras)"
+              data-name="Sillas de coche (lavado simples)"
+              data-price=""
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="pet.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Eliminación de cabello de mascotas</p>
+          <div class="priceadd">
+            <p id="PRICE">​</p>
+            <button
+              class="add-option"
+              id="add-option"
+              data-category="Interior (Extras)"
+              data-name="Eliminación de cabello de mascotas"
+              data-price=""
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="carpet.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Alfombras para coche (lavado simples)</p>
+          <div class="priceadd">
+            <p id="PRICE">​</p>
+
+            <button
+              class="add-option"
+              id="add-option"
+              data-category="Interior (Extras)"
+              data-name="Alfombras para coche (lavado simple)"
+              data-price=""
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="extradirty.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Muy sucio</p>
+          <div class="priceadd">
+            <p id="PRICE">​</p>
+
+            <button
+              class="add-option"
+              id="add-option"
+              data-category="Interior (Extras)"
+              data-name="muy sucio (interior)"
+              data-price=""
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nextbtn">
+      <button id="nextButton">próximo</button>
+    </div>
+    <script>
+      document
+        .getElementById("nextButton")
+        .addEventListener("click", function () {
+          const data = JSON.parse(localStorage.getItem("selectedChecklists")); // Parse the data as JSON
+          console.log("mydata", data);
+
+          if (data) {
+            if (data.exterior && data.exterior.length === 0) {
+              window.location.href = "credential.html";
+            } else {
+              // If both interior and exterior have items, you can navigate to checkout.html
+              window.location.href = "exterior.html";
+            }
+          } else {
+            window.location.href = "exterior.html";
+          }
+        });
+      document
+        .getElementById("select-buttons")
+        .addEventListener("click", function () {
+          const selectedChecklists = JSON.parse(
+            localStorage.getItem("selectedChecklists")
+          );
+          const washType = selectedChecklists.washType;
+          window.location.href = `washtype.html?type=${washType}`;
+          console.log("list", selectedChecklists);
+          localStorage.removeItem("selectedChecklists");
+          localStorage.removeItem("selectedOptions");
+        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectedChecklists = JSON.parse(
+          localStorage.getItem("selectedChecklists")
+        );
+        const washType = selectedChecklists.washType;
+        let price;
+        if (washType === "small-car") {
+          price = 2.99;
+        } else if (washType === "medium-car") {
+          price = 3.99;
+        } else if (washType === "big-car") {
+          price = 4.99;
+        } else {
+          price = 2.99;
+        }
+        const priceElements = document.querySelectorAll("#PRICE");
+        const addOptionElements = document.querySelectorAll("#add-option");
+        priceElements.forEach((priceElement) => {
+          priceElement.innerHTML = `€ ${price}`;
+        });
+        addOptionElements.forEach((addOptionElement) => {
+          addOptionElement.setAttribute("data-price", `${price}`);
+        });
+      });
+    </script>
+
+    <script src="common.js"></script>
+  </body>
+</html>

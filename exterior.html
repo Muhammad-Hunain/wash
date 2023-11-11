@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exterior</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-container">
+      <button class="select-button" id="select-button">&lt</button>
+      
+    </div>
+    <div class="interiordiv">
+      <h2>Exterior</h2>
+      
+      
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="extradirty.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Muy sucio</p>
+          <div class="priceadd">
+            <p id="PRICE"></p>
+            <button class="add-option" id="add-option" data-category="Exterior (Extras)" data-name="muy sucio (exterior)" data-price="">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="rims.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class= "interiortext">
+          <p>Llantas y neumáticos</p>
+          <div class="priceadd">
+            <p id="PRICE"></p>
+            <button class="add-option" id="add-option" data-category="Exterior (Extras)" data-name="Llantas y neumáticos" data-price="">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="extra">
+        <div class="interiorimg">
+          <img src="insect.jpeg" alt="interior" height="120px" width="120px" />
+        </div>
+        <div class="interiortext">
+          <p>Eliminación de insectos muertos</p>
+          <div class="priceadd">
+            <p id="PRICE"></p>
+            <button class="add-option" id="add-option" data-category="Exterior (Extras)" data-name="Eliminación de insectos muertos" data-price="">Add</button>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+   
+    <div class="nextbtn">
+      <button id="nextButton">próximo</button>
+     </div>
+     <script>
+      document.getElementById("nextButton").addEventListener("click", function() {
+          window.location.href = "credential.html";
+      });
+      document.getElementById("select-button").addEventListener("click", function() {
+        const data = JSON.parse(localStorage.getItem("selectedChecklists")); // Parse the data as JSON
+          console.log("mydata", data);
+          const washType = data.washType;
+         
+          if (data) {
+           if (data.exterior && data.interior.length === 0) {
+            localStorage.removeItem("selectedChecklists");
+            localStorage.removeItem("selectedOptions");
+            window.location.href = `washtype.html?type=${washType}`;
+
+            } else {
+             localStorage.removeItem("selectedOptions")
+              window.location.href = "interior.html";
+            }
+          } else {
+            localStorage.removeItem("selectedOptions")
+            window.location.href = `washtype.html?type=${washType}`;
+
+          }
+
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectedChecklists = JSON.parse(
+          localStorage.getItem("selectedChecklists")
+        );
+        const washType = selectedChecklists.washType;
+        let price;
+        if (washType === "small-car") {
+          price = 2.99;
+        } else if (washType === "medium-car") {
+          price = 3.99;
+        } else if (washType === "big-car") {
+          price = 4.99;
+        } else {
+          price = 2.99;
+        }
+        const priceElements = document.querySelectorAll("#PRICE");
+        const addOptionElements = document.querySelectorAll("#add-option");
+        priceElements.forEach((priceElement) => {
+          priceElement.innerHTML = `€ ${price}`;
+        });
+        addOptionElements.forEach((addOptionElement) => {
+          addOptionElement.setAttribute("data-price", `${price}`);
+        });
+      });
+  </script>
+     <script src="common.js"></script>
+  </body>
+</html>

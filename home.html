@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Washes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="all">
+
+    
+    <div class="hea">
+        <img src="logomain.png" alt="logo" />
+        <!-- <h1>Our <span class="titlespan">Washes</span></h1> -->
+        
+        <p>Lavamos tu coche en la plaza de garaje de tu condominio sin agua</p>
+        <!-- <div class="descriptions">
+
+       
+        <div class="count">
+            <h1>1</h1>
+            <h4>Escoge tipo de lavado </h4>
+        </div>
+        <div class="count">
+            <h1>2</h1>
+            <h4>Escoge fecha y hora</h4>
+        </div>
+        <div class="count">
+            <h1>3</h1>
+            <h4>Disfruta de tu coche limpio</h4>
+        </div>
+    </div> -->
+    </div>
+    <div class="con">
+        <div class="Car_main">
+            <div class="count">
+                <h1>1</h1>
+                <h4>Escoge tipo de lavado </h4>
+            </div>
+   <div class="wash-container" id="small-car">
+            <div class="wash">
+                <h2>COCHE <span>PEQUEÑO </span></h2>
+                <div class="wash-image">
+                    <img src="t2.png" alt="Wash 1" />
+                    <img src="pngwing.com.png" alt="Wash 1" />
+                    <div class="uppergrid">
+                        <img src="POPUP.png"  id="pop-small-car" alt="Wash 1" hidden="true" />
+                    </div>
+                  
+                    
+
+                </div>
+                <p >desde</p>
+                <div class="wash-price">€ 4.95</div>
+                <div class="infoclass">
+                    <h5>Que son de tamaño <span>MEDIANO</span>:</h5>
+                    <img src="SINFO.png"  style="cursor: pointer;" alt="Wash 1" id="clicks-small-car"/>
+                </div>
+                <div class="buttonlearn">
+                    <button class="button"><a href="washtype.html?type=small-car">Reserva cita</a></button>
+                </div>
+            </div>
+        </div>
+        </div>
+     
+        <div class="Car_main">
+            <div class="count">
+                <h1>2</h1>
+                <h4>Escoge fecha y hora</h4>
+            </div>
+            <div class="wash-container" id="medium-car">
+                <div class="wash">
+                    <h2>COCHE <span>MEDIANO</span></h2>
+                    <div class="wash-image">
+                        <img src="t2.png" alt="Wash 1" />
+                        <img src="pic22.png" alt="Wash 2" />
+                        <div class="uppergrid">
+                            <img src="POPUP2.png"  id="pop-medium-car" alt="Wash 1" hidden="true" />
+                        </div>
+                    </div>
+                    <p>desde</p>
+                    <div class="wash-price">€ 5.95</div>
+                    <div class="infoclass">
+                        <h5>Que son de tamaño <span>MEDIANO</span>:</h5>
+                        <img src="SINFO.png" style="cursor: pointer;" alt="Wash 1" id="clicks-medium-car"/>
+                    </div>
+                    <div class="buttonlearn">
+                        <button class="button"><a href="washtype.html?type=medium-car">Reserva cita</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div class="Car_main">
+            <div class="count">
+                <h1>3</h1>
+                <h4>Disfruta de tu coche limpio</h4>
+            </div>
+            <div class= "wash-container" id="big-car">
+                <div class="wash">
+                    <h2>COCHE <span>GRANDE</span></h2>
+                    <div class="wash-image">
+                        <img src="t2.png" alt="Wash 1" />
+                        <img src="pic33.png" alt="Wash 3" />
+                        <div class="uppergrid">
+                            <img src="POPUP3.png"  id="pop-big-car" alt="Wash 1" hidden="true" />
+                        </div>
+                    </div>
+                    <p>desde</p>
+                    <div class="wash-price">€ 6.95</div>
+                    <div class="infoclass">
+                        <h5>Que son de tamaño <span>MEDIANO</span>:</h5>
+                        <img src="SINFO.png" style="cursor: pointer;" alt="Wash 1"  id="clicks-big-car"  />
+                    </div>
+                    <div class="buttonlearn">
+                        <button class="button"><a href="washtype.html?type=big-car">Reserva cita</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+    <div class="footer">
+      
+        <img src="refpic1.png" alt="Wash 1" />
+        <img src="pp1.png" alt="Wash 1" />
+        <img src="pp2.png" alt="Wash 1" />
+        <img src="pp3.png" alt="Wash 1" />
+        
+       <h1>Contactos</h1>
+       <div class="maincontactos">
+        <div class="contactos">
+            <a href="https://wa.me/34637851925" target="_blank">
+                <i class="fa-brands fa-whatsapp" style="font-size: 31px; color: #008000;"></i>
+                <h3>637 851 925</h3>
+            </a>
+        </div>
+        
+<div class="contactos">
+    <a href="mailto:info@glowash.com">
+        <i class="fa-solid fa-envelope" style="font-size: 31px;  color: #ff0000;"></i>
+        <h3> info@glowosh.com</h3>
+    </a>  
+</div>
+       </div>
+       
+    </div>
+    </div>
+</div>
+<script>
+    var infoClicked = {
+        "small-car": false,
+        "medium-car": false,
+        "big-car": false
+    };
+
+    function toggleInfo(id) {
+        var pop = document.getElementById("pop-" + id);
+        if (infoClicked[id]) {
+            pop.style.display = "none"; // Set the element to hidden
+        } else {
+            pop.style.display = "block"; // Set the element to visible
+        }
+        infoClicked[id] = !infoClicked[id]; // Toggle the infoClicked variable
+    }
+
+    document.getElementById("clicks-small-car").addEventListener("click", function () {
+        toggleInfo("small-car");
+    });
+
+    document.getElementById("clicks-medium-car").addEventListener("click", function () {
+        toggleInfo("medium-car");
+    });
+
+    document.getElementById("clicks-big-car").addEventListener("click", function () {
+        toggleInfo("big-car");
+    });
+</script>
+
+
+</body>
+</html>
